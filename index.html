@@ -180,6 +180,7 @@
         <!-- START CONTENT -->
         <main id="content">
             <div class="stat">
+                <p class="updated-date highlight-out">Data da última actualização: <span id="current-data" class="highlight-out"></span></p>
                 <ul class="stat-group">
                     <li class="stat-item">
                         <p class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg"
@@ -192,8 +193,8 @@
                                         fill="#eb4559" />
                                 </g>
                             </svg></p>
-                        <h3 class="stat-count">5352</h3>
-                        <p class="stat-title">Casos activos</p>
+                        <h3 class="stat-count" id="confirmedCase">0</h3>
+                        <p class="stat-title">Casos confirmados</p>
                     </li>
                     <li class="stat-item">
                         <p class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg"
@@ -204,8 +205,8 @@
                                     d="M7.5 4A5.5 5.5 0 0 0 2 9.5c0 .5.09 1 .22 1.5H6.3l1.27-3.37c.3-.8 1.48-.88 1.86 0L11.5 13l.59-1.42c.13-.33.48-.58.91-.58h8.78c.13-.5.22-1 .22-1.5A5.5 5.5 0 0 0 16.5 4c-1.86 0-3.5.93-4.5 2.34C11 4.93 9.36 4 7.5 4M3 12.5a1 1 0 0 0-1 1a1 1 0 0 0 1 1h2.44L11 20c1 .9 1 .9 2 0l5.56-5.5H21a1 1 0 0 0 1-1a1 1 0 0 0-1-1h-7.6l-.93 2.3c-.4 1.01-1.55.87-1.92.03L8.5 9.5l-.96 2.33c-.15.38-.49.67-.94.67H3z"
                                     fill="#f7c45a" />
                             </svg></p>
-                        <h3 class="stat-count">2300</h3>
-                        <p class="stat-title">Casos recuperados</p>
+                        <h3 class="stat-count" id="activeCase">0</h3>
+                        <p class="stat-title">Casos activos</p>
                     </li>
                     <li class="stat-item">
                         <p class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg"
@@ -218,7 +219,7 @@
                                         fill="#999" />
                                 </g>
                             </svg></p>
-                        <h3 class="stat-count">152</h3>
+                        <h3 class="stat-count" id="deaths">0</h3>
                         <p class="stat-title">Mortes</p>
                     </li>
                     <li class="stat-item">
@@ -230,7 +231,7 @@
                                     d="M20 17q.86 0 1.45.6t.58 1.4L14 22l-7-2v-9h1.95l7.27 2.69q.78.31.78 1.12q0 .47-.34.82t-.86.37H13l-1.75-.67l-.33.94L13 17h7M16 3.23Q17.06 2 18.7 2q1.36 0 2.3 1t1 2.3q0 1.03-1 2.46t-1.97 2.39T16 13q-2.08-1.89-3.06-2.85t-1.97-2.39T10 5.3q0-1.36.97-2.3t2.34-1q1.6 0 2.69 1.23M.984 11H5v11H.984V11z"
                                     fill="#007548" />
                             </svg></p>
-                        <h3 class="stat-count">14</h3>
+                        <h3 class="stat-count">0*</h3>
                         <p class="stat-title">Vacinados</p>
                     </li>
                 </ul>
@@ -2341,6 +2342,7 @@
 
     <script src="js/jquery/jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/covid-api.js"></script>
 </body>
 
 </html>

@@ -357,12 +357,23 @@
   position: relative;
   opacity: 0;
   transform: translateY(200px);
+  -webkit-transform: translateY(200px);
+  -moz-transform: translateY(200px);
+  -ms-transform: translateY(200px);
+  -o-transform: translateY(200px);
 }
 #content .active .reveal-group {
   animation-name: reveal-show-up;
   animation-timing-function: ease-in-out;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+}
+#content .updated-date {
+  margin-bottom: 10px;
+  font-style: oblique;
+}
+#content #current-date {
+  font-size: 0.6rem;
 }
 #content .stat {
   text-align: center;
@@ -906,7 +917,7 @@
   box-shadow: 1px 1px 15px 10px #eb455817;
   display: grid;
   place-items: center;
-  opacity: .5;
+  opacity: 0.5;
 }
 @media screen and (min-width: 768px) {
   #content .partnership .partnership-group .partnership-pic {
