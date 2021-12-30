@@ -1,14 +1,19 @@
 //DATA ACTUAL
-let date = new Date();
+let today = new Date();
+//DATA DE ONTEM
+let yesterday = new Date(today.setDate(today.getDate() - 1))
+//DATA DO DIA DE ONTEM EM ANGOLA
+let currentData = yesterday.toLocaleString('pt-BR', { timeZone: 'Africa/Luanda', year: 'numeric', month: '2-digit', day: '2-digit' })
+//SUBSTITUIR / POR -
+let date = currentData.replaceAll('/', '-')
+//DIVIDIR ELEMENTOS DA DATA
+let dataVector = date.split("-");
+//ORGANIZAR EM FORMATO YYYY-MM-DD
+let from = `${dataVector[2]}-${dataVector[1]}-${dataVector[0]}`
+//DISPLAY DATA NA PÁGINA
+document.querySelector('#current-data').innerText= date
 
-let currentData = document.querySelector('#current-data').innerText = `${date.getDate()-1}-${date.getMonth()}-${date.getFullYear()}`
-
-let from = `${date.getFullYear()}-${date.getMonth()}-${date.getDate() - 1}`
-
-console.log(currentData)
 const url = 'https://api.covid19api.com/live/country/angola/status/confirmed/date/' + from
-
-
 fetch(url).then((response) => response.json())
     .then(function (data) {
         const results = data;
